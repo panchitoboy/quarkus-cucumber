@@ -20,6 +20,7 @@
     <quarkus.platform.version>1.10.2.Final</quarkus.platform.version>
     <surefire-plugin.version>2.22.1</surefire-plugin.version>
     <cucumber.version>6.5.0</cucumber.version>
+    <junit-vintage-engine.version>5.7.1</junit-vintage-engine.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -77,6 +78,14 @@
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
       <scope>test</scope>
+    </dependency>
+
+    <!-- Required to run cucumber tests in JUnit 5 -->
+    <dependency>
+        <groupId>org.junit.vintage</groupId>
+        <artifactId>junit-vintage-engine</artifactId>
+        <version>${junit-vintage-engine.version}</version>
+        <scope>test</scope>
     </dependency>
 
   </dependencies>
